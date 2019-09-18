@@ -1,0 +1,19 @@
+{
+  "name": "crs_llw",
+  "version": "1.0.0",
+  "description": "Cardrating system LLW",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeardyCode/CRS_LLW.git"
+  },
+  "author": "Christos Giannoulas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BeardyCode/CRS_LLW/issues"
+  },
+  "homepage": "https://github.com/BeardyCode/CRS_LLW#readme"
+}
