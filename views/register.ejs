@@ -1,0 +1,34 @@
+<% include partials/header %>
+
+<h1>Registreer een account</h1>
+
+<form method="POST" action="/users/register">
+
+    <p><input 
+        type="text" 
+        id="fullname" 
+        name="fullname" 
+        placeholder="Gebruikersnaam"></p>
+
+    <p><input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="E-mail"></p>
+
+    <p><input
+        type="password" 
+        id="password" 
+        name="password" 
+        placeholder="Wachtwoord"></p>
+
+    <p><input
+        type="password" 
+        id="password2" 
+        name="password2" 
+        placeholder="Herhaal Wachtwoord"></p>
+
+    <p><button type="submit">REGISTER</button></p>
+</form>
+
+<% include partials/footer %>
