@@ -1,0 +1,43 @@
+<% include partials/header %>
+
+<form action="/cards/addcards" method="post">
+    <p><input 
+        type="text" 
+        id="cardname" 
+        name="cardname" 
+        placeholder="Voer Kaartnaam in"></p>
+    
+    <p><input
+        type="text" 
+        id="cardrarity" 
+        name="cardrarity" 
+        placeholder="Voer rarity in"></p>
+
+    <p><input 
+        type="text" 
+        id="cardtext" 
+        name="cardtext" 
+        placeholder="Voer tekst in"></p>
+
+    <p><input 
+        type="text" 
+        id="cardcost" 
+        name="cardcost" 
+        placeholder="Voer cost in"></p>
+    
+    <p><input
+        type="text" 
+        id="cardtype" 
+        name="cardtype" 
+        placeholder="Voer cardtype in"></p>
+
+    <p><input
+        type="text"
+        id="cardstats"
+        name="cardstats"
+        placeholder="Voer Power/Toughness in"></p>
+
+<button type="submit">ADD CARDS</button>
+</form>
+
+<% include partials/footer %>

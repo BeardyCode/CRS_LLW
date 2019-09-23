@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 
 //Gebruikers/Account model
 const UserSchema = mongoose.Schema({
-    fullname: {
+    username: {
         type: String,
         required: true
     },
@@ -38,5 +38,19 @@ module.exports.createUser = (newUserData, callback) => {
                 callback(null, user);
             });
         });
+    });
+}
+
+module.exports.findUserByUsername = (username, callback) => {
+    const selector = new RegExp(username, 'i');
+    const query = { username: selector };
+    User.findOne(query, (err, res) => {
+        err ? callback(err) : callback(null, res);
+    });
+}
+
+module.exports.findUserById = (id, callback) => {
+    User.findById(id, (err, res) => {
+        err ? callback(err) : callback(null, res);
     });
 }

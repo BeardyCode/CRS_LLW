@@ -61,7 +61,7 @@ app.get("/", (req, res) => {
 
 //Declareer gebruiker routes
 app.use('/users', require('./routes/users'));
-// app.use('/cards', require('./routes/cards'));
+app.use('/cards', require('./routes/cards'));
 
 //Initialiseren app verbinding
 const port = process.env.PORT || 3000;

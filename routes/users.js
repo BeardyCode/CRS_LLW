@@ -13,14 +13,14 @@ const { check, validationResult } = require('express-validator');
 router.get('/login', (req, res) => {
     res.render('login', {
         title: 'Login',
-        user: null
+        user: req.user
     });
 });
 
 //Login post request
 router.post('/login', (req, res, next) => {
     passport.authenticate('local', {
-      successRedirect: '/',
+      successRedirect: '/users/dashboard',
       failureRedirect: '/'
     })(req, res, next);
   });
@@ -43,10 +43,10 @@ router.get('/error', (req, res) => {
 
 //Registratie post request
 router.post('/register', [
-    check('fullname').not().isEmpty().withMessage('Full name is required')
+    check('username').not().isEmpty().withMessage('Full name is required')
     .custom((value, {req}) => {
         return new Promise((resolve, reject) => {
-          User.findOne({fullname:req.body.fullname}, function(err, user){
+          User.findOne({username:req.body.username}, function(err, user){
             if(err) {
               reject(new Error('Server Error'))
             }
@@ -93,6 +93,14 @@ router.get('/logout', (req, res) => {
     req.logout();
     res.redirect('/');
   });
+
+  router.get('/dashboard', (req, res) => {
+    res.render('dashboard', {
+        title: 'Dashboard',
+        user: req.user
+    });
+});
+
 
 //EXPORT MODULE
 module.exports = router;

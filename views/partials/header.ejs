@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/navbar.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,14 +27,14 @@
                 
                 <div class="nav-links">
                   <a href="/">Home</a>
-                  <a href="/users/dashboard">Dashboard</a>
-                  <a href="/users/ratecards">Rate Cards</a>
                   <% if (!user) { %>
                   <a href="/users/register">Register</a>
                   <a href="/users/login">Login</a>
                   <% } else { %>
-                    <a href="/users/login">Logout</a>
+                    <a href="/users/dashboard">Dashboard</a>
+                    <a href="/cards/ratecards">Rate Cards</a>
+                    <a href="/users/logout">Logout</a>
                        <% } %>
                 </div>
               </div>
-    
+    <div id="wrapper" class="wrapper">

@@ -1,0 +1,26 @@
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas: 
+    "navbar"
+    "wrapper"
+    "footer";
+}
+.wrapper{
+    grid-area: wrapper;
+    width: 100%;
+    height: 90%;
+    background-color: wheat;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: #4d4d4d;
+    width: 100%;
+    height: fit-content;
+    color: #fff
+}
